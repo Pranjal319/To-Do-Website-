@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Simple Todo App</title> 
+    
+    <!-- Cache Control and Performance Meta Tags -->
+    <meta http-equiv="Cache-Control" content="max-age=31536000, public">
+    <meta http-equiv="Expires" content="Thu, 31 Dec 2025 23:59:59 GMT">
+    <meta name="description" content="A fast, optimized todo app to stay organized">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- DNS Prefetch for External Resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+    <div class="container"> 
+        <header> 
+            <h1>My Todo List</h1> 
+            <p>Stay organized and get things done!</p> 
+        </header> 
+ 
+        <div class="todo-input"> 
+            <input type="text" id="todoInput" placeholder="Add a new task..." maxlength="100"> 
+            <button id="addBtn">Add Task</button> 
+        </div> 
+ 
+        <div class="todo-stats"> 
+            <span id="totalTasks">Total: 0</span> 
+            <span id="completedTasks">Completed: 0</span> 
+            <span id="pendingTasks">Pending: 0</span> 
+        </div>
+        <div class="todo-filters"> 
+            <button class="filter-btn active" data-filter="all">All</button> 
+            <button class="filter-btn" data-filter="pending">Pending</button> 
+            <button class="filter-btn" data-filter="completed">Completed</button> 
+        </div> 
+ 
+        <ul id="todoList" class="todo-list"> 
+        </ul> 
+ 
+        <div class="empty-state" id="emptyState"> 
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 11l3 3 8-8'/%3E%3Cpath d='M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3'/%3E%3Cpath d='M11 15l-3-3'/%3E%3C/svg%3E" 
+                 loading="lazy" 
+                 decoding="async" 
+                 alt="Todo icon" 
+                 width="48" 
+                 height="48" 
+                 style="opacity: 0.3; margin-bottom: 10px;">
+            <p>No tasks yet. Add one above to get started!</p> 
+        </div> 
+ 
+        <div class="clear-section"> 
+            <button id="clearCompleted">Clear Completed</button> 
+            <button id="clearAll">Clear All</button> 
+        </div> 
+    </div> 
+ 
+    <!-- Load optimized JavaScript with defer for better performance -->
+    <script src="script.js" defer></script>
+</body> 
+</html>
